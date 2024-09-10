@@ -1,0 +1,32 @@
+/* employee-list.component.css */
+
+.table-container {
+    height: 400px; /* Adjust height as needed */
+    overflow-y: auto;
+    margin-bottom: 50px; /* Space for footer */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

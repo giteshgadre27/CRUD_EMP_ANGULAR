@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Table</title>
+    <!-- <style>
+        .table-container {
+            height: 400px; /* Adjust height as needed */
+            overflow-y: auto;
+            margin-bottom: 50px; /* Space for footer */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style> -->
+</head>
+<body>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Contact Number</th>
+                    <th>Job Title</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.address}}</td>
+                    <td>{{employee.contactNumber}}</td>
+                    <td>{{employee.jobTitle}}</td>
+                    <td>
+                        <button (click)="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+                        <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  
+</body>
+</html>
+
